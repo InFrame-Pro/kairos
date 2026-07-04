@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
+/* ============================================
+   KAIRÓS — Design tokens
+   Paleta Pergamino antiguo (light) + Cálido nocturno (dark)
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds & surfaces */
+  --cream: #F0E6CC;
+  --cream-soft: #F7EFDB;
+  --cream-deep: #E5D3A6;
+  --card-bg: #FFFFFF;
+
+  /* Text */
+  --ink: #3A2817;
+  --ink-soft: #8B5E3C;
+  --ink-line: #D6C39A;
+
+  /* Accent — la llama */
+  --amber: #C97A2C;
+  --amber-rgb: 201, 122, 44;
+  --amber-deep: #A0432A;
+  --amber-glow: #E8A044;
+  --amber-glow-rgb: 232, 160, 68;
+
+  /* Complementario */
+  --sage: #8B9876;
+
+  /* Chrome (nav) */
+  --nav-bg: rgba(240, 230, 204, 0.88);
+  --shadow-rgb: 58, 40, 23;
 }
+
+.dark {
+  --cream: #14100D;
+  --cream-soft: #1D1712;
+  --cream-deep: #2C221A;
+  --card-bg: #1E1712;
+  --ink: #EDE4CC;
+  --ink-soft: #A89876;
+  --ink-line: #3A2E23;
+  --amber: #E8A044;
+  --amber-rgb: 232, 160, 68;
+  --amber-deep: #C97A2C;
+  --amber-glow: #FFD06A;
+  --amber-glow-rgb: 255, 208, 106;
+  --sage: #8B9876;
+  --nav-bg: rgba(20, 16, 13, 0.88);
+  --shadow-rgb: 0, 0, 0;
+}
+
+/* ============================================
+   Tailwind theme tokens
+   Estos son los que se usan en className="bg-cream"
+   ============================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colores como clases de Tailwind */
+  --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
+  --color-cream-deep: var(--cream-deep);
+  --color-card: var(--card-bg);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-line: var(--ink-line);
+  --color-amber: var(--amber);
+  --color-amber-deep: var(--amber-deep);
+  --color-amber-glow: var(--amber-glow);
+  --color-sage: var(--sage);
+
+  /* Familias tipográficas */
+  --font-display: var(--font-fraunces);
+  --font-brand: var(--font-cinzel);
+  --font-greek: var(--font-cardo);
+  --font-body: var(--font-inter-tight);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ============================================
+   Base
+   ============================================ */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-inter-tight), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(var(--amber-rgb), 0.05) 0%, transparent 55%),
+    radial-gradient(circle at 82% 78%, rgba(139, 152, 118, 0.04) 0%, transparent 55%);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--cream-soft);
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
