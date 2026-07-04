@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Fraunces, Cinzel, Cardo, Inter_Tight } from 'next/font/google';
+import { Suspense } from 'react';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
+import { PostHogProvider } from '@/components/ui/PostHogProvider';
 import './globals.css';
 
 const fraunces = Fraunces({
@@ -71,7 +73,11 @@ export default function RootLayout({
       className={`${fraunces.variable} ${cinzel.variable} ${cardo.variable} ${interTight.variable}`}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Suspense fallback={null}>
+            <PostHogProvider>{children}</PostHogProvider>
+          </Suspense>
+        </ThemeProvider>
       </body>
     </html>
   );
