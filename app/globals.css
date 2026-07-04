@@ -1,33 +1,30 @@
 @import "tailwindcss";
 
 /* ============================================
+   Configurar dark mode para usar la clase .dark
+   (importante para Tailwind 4 + next-themes)
+   ============================================ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================
    KAIRÓS — Design tokens
    Paleta Pergamino antiguo (light) + Cálido nocturno (dark)
    ============================================ */
 
 :root {
-  /* Backgrounds & surfaces */
   --cream: #F0E6CC;
   --cream-soft: #F7EFDB;
   --cream-deep: #E5D3A6;
   --card-bg: #FFFFFF;
-
-  /* Text */
   --ink: #3A2817;
   --ink-soft: #8B5E3C;
   --ink-line: #D6C39A;
-
-  /* Accent — la llama */
   --amber: #C97A2C;
   --amber-rgb: 201, 122, 44;
   --amber-deep: #A0432A;
   --amber-glow: #E8A044;
   --amber-glow-rgb: 232, 160, 68;
-
-  /* Complementario */
   --sage: #8B9876;
-
-  /* Chrome (nav) */
   --nav-bg: rgba(240, 230, 204, 0.88);
   --shadow-rgb: 58, 40, 23;
 }
@@ -50,13 +47,7 @@
   --shadow-rgb: 0, 0, 0;
 }
 
-/* ============================================
-   Tailwind theme tokens
-   Estos son los que se usan en className="bg-cream"
-   ============================================ */
-
 @theme inline {
-  /* Colores como clases de Tailwind */
   --color-cream: var(--cream);
   --color-cream-soft: var(--cream-soft);
   --color-cream-deep: var(--cream-deep);
@@ -68,20 +59,13 @@
   --color-amber-deep: var(--amber-deep);
   --color-amber-glow: var(--amber-glow);
   --color-sage: var(--sage);
-
-  /* Familias tipográficas */
   --font-display: var(--font-fraunces);
   --font-brand: var(--font-cinzel);
   --font-greek: var(--font-cardo);
   --font-body: var(--font-inter-tight);
 }
 
-/* ============================================
-   Base
-   ============================================ */
-
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -104,7 +88,6 @@ body {
   color: var(--cream-soft);
 }
 
-/* Reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
