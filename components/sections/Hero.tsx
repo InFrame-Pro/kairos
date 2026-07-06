@@ -54,7 +54,7 @@ export function Hero() {
           <strong className="font-medium text-[var(--ink)]">gratis para siempre</strong>.
         </p>
 
-        <WaitlistForm source="hero" />
+        <WaitlistForm source="hero" ctaLabel="Avísame cuando salga" />
       </div>
     </section>
   );

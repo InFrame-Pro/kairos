@@ -6,7 +6,15 @@ import { joinWaitlist, type WaitlistState } from "@/app/actions/waitlist";
 
 const initial: WaitlistState = { status: "idle" };
 
-export function WaitlistForm({ source = "hero" }: { source?: string }) {
+type Props = {
+  source?: string;
+  ctaLabel?: string;
+};
+
+export function WaitlistForm({
+  source = "hero",
+  ctaLabel = "Avísame cuando salga",
+}: Props) {
   const [state, formAction, isPending] = useActionState(joinWaitlist, initial);
   const [utm, setUtm] = useState({ utm_source: "", utm_medium: "", utm_campaign: "" });
 
@@ -62,7 +70,7 @@ export function WaitlistForm({ source = "hero" }: { source?: string }) {
         disabled={isPending}
         className="whitespace-nowrap rounded-md border-none bg-[var(--amber)] px-6 py-4 text-[14px] font-semibold text-[var(--cream-soft)] transition-all hover:-translate-y-px hover:bg-[var(--amber-deep)] disabled:opacity-70 md:px-[30px] md:py-[17px]"
       >
-        {isPending ? "uniéndote…" : "Avísame cuando salga"}
+        {isPending ? "uniéndote…" : ctaLabel}
       </button>
 
       {state.status === "error" && (

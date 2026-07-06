@@ -1,4 +1,5 @@
 'use client';
+import { WaitlistForm } from '@/components/waitlist-form';
 
 export function FinalCTA() {
   return (
@@ -14,7 +15,6 @@ export function FinalCTA() {
             'radial-gradient(circle, rgba(var(--amber-glow-rgb),0.16) 0%, transparent 65%)',
         }}
       />
-
       <div className="relative z-10 mx-auto max-w-[1180px] text-center">
         <h2
           className="mb-7 tracking-tight text-[var(--ink)]"
@@ -32,28 +32,7 @@ export function FinalCTA() {
           Estamos invitando a los primeros 500. Acceso anticipado y voz directa en lo que vamos
           construyendo.
         </p>
-
-        <form
-          className="mx-auto flex max-w-[480px] flex-col gap-2.5 md:flex-row md:gap-2"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const btn = e.currentTarget.querySelector('button');
-            if (btn) btn.textContent = 'listo, te avisamos ✓';
-          }}
-        >
-          <input
-            type="email"
-            placeholder="tu correo"
-            required
-            className="flex-1 rounded-md border border-[var(--ink-line)] bg-[var(--cream-soft)] px-[18px] py-4 text-[16px] text-[var(--ink)] placeholder:text-[var(--ink-soft)]/60 focus:border-[var(--amber)] focus:bg-[var(--card)] focus:outline-none md:px-5 md:py-[17px] md:text-[15px]"
-          />
-          <button
-            type="submit"
-            className="whitespace-nowrap rounded-md border-none bg-[var(--amber)] px-6 py-4 text-[14px] font-semibold text-[var(--cream-soft)] transition-all hover:-translate-y-px hover:bg-[var(--amber-deep)] md:px-[30px] md:py-[17px]"
-          >
-            Quiero entrar
-          </button>
-        </form>
+        <WaitlistForm source="final_cta" ctaLabel="Quiero entrar" />
       </div>
     </section>
   );
