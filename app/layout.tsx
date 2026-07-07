@@ -11,14 +11,12 @@ const fraunces = Fraunces({
   display: 'swap',
   axes: ['opsz'],
 });
-
 const cinzel = Cinzel({
   subsets: ['latin'],
   variable: '--font-cinzel',
   weight: ['400', '500', '600'],
   display: 'swap',
 });
-
 const cardo = Cardo({
   subsets: ['latin'],
   variable: '--font-cardo',
@@ -26,7 +24,6 @@ const cardo = Cardo({
   style: ['normal', 'italic'],
   display: 'swap',
 });
-
 const interTight = Inter_Tight({
   subsets: ['latin'],
   variable: '--font-inter-tight',
@@ -34,25 +31,55 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'Kairós — Una app bíblica para tu generación',
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  ),
+  title: {
+    default: 'Kairós — Una app bíblica para tu generación',
+    template: '%s · Kairós',
+  },
   description:
     'Una app cristiana hecha en comunidad, gratis para siempre. καιρός — el momento exacto es ahora.',
-  keywords: ['biblia', 'app cristiana', 'kairós', 'oración', 'devocional'],
+  keywords: [
+    'biblia',
+    'app cristiana',
+    'kairós',
+    'oración',
+    'devocional',
+    'jóvenes cristianos',
+    'lectura bíblica',
+    'biblia app',
+    'devocional diario',
+  ],
   authors: [{ name: 'Kairós A.C.' }],
+  creator: 'Kairós A.C.',
+  publisher: 'Kairós A.C.',
   openGraph: {
     title: 'Kairós — El momento exacto es ahora',
-    description: 'App bíblica gratuita hecha con cariño.',
+    description: 'Una app bíblica hecha con cariño, gratis para siempre.',
     type: 'website',
     locale: 'es_MX',
+    siteName: 'Kairós',
+    url: '/',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Kairós — El momento exacto es ahora',
-    description: 'App bíblica gratuita hecha con cariño.',
+    description: 'Una app bíblica hecha con cariño, gratis para siempre.',
   },
   icons: {
     icon: '/favicon.ico',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 
