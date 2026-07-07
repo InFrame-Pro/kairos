@@ -1,10 +1,11 @@
 // components/waitlist-form.tsx
-"use client";
+'use client';
 
-import { useActionState, useEffect, useState } from "react";
-import { joinWaitlist, type WaitlistState } from "@/app/actions/waitlist";
+import { useActionState, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { joinWaitlist, type WaitlistState } from '@/app/actions/waitlist';
 
-const initial: WaitlistState = { status: "idle" };
+const initial: WaitlistState = { status: 'idle' };
 
 type Props = {
   source?: string;
@@ -12,31 +13,32 @@ type Props = {
 };
 
 export function WaitlistForm({
-  source = "hero",
-  ctaLabel = "Avísame cuando salga",
+  source = 'hero',
+  ctaLabel = 'Avísame cuando salga',
 }: Props) {
+  const router = useRouter();
   const [state, formAction, isPending] = useActionState(joinWaitlist, initial);
-  const [utm, setUtm] = useState({ utm_source: "", utm_medium: "", utm_campaign: "" });
+  const [utm, setUtm] = useState({
+    utm_source: '',
+    utm_medium: '',
+    utm_campaign: '',
+  });
 
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
     setUtm({
-      utm_source: p.get("utm_source") ?? "",
-      utm_medium: p.get("utm_medium") ?? "",
-      utm_campaign: p.get("utm_campaign") ?? "",
+      utm_source: p.get('utm_source') ?? '',
+      utm_medium: p.get('utm_medium') ?? '',
+      utm_campaign: p.get('utm_campaign') ?? '',
     });
   }, []);
 
-  if (state.status === "success") {
-    return (
-      <p
-        className="mx-auto max-w-[480px] text-center text-[17px] leading-relaxed text-[var(--ink)] md:text-[19px]"
-        style={{ fontFamily: "var(--font-fraunces)" }}
-      >
-        Gracias. Te avisamos cuando encendamos la primera vela. 🕯️
-      </p>
-    );
-  }
+  // Redirige a /gracias cuando el submit fue exitoso
+  useEffect(() => {
+    if (state.status === 'success') {
+      router.push(`/gracias?from=${source}`);
+    }
+  }, [state.status, source, router]);
 
   return (
     <form
@@ -67,13 +69,17 @@ export function WaitlistForm({
       />
       <button
         type="submit"
-        disabled={isPending}
+        disabled={isPending || state.status === 'success'}
         className="whitespace-nowrap rounded-md border-none bg-[var(--amber)] px-6 py-4 text-[14px] font-semibold text-[var(--cream-soft)] transition-all hover:-translate-y-px hover:bg-[var(--amber-deep)] disabled:opacity-70 md:px-[30px] md:py-[17px]"
       >
-        {isPending ? "uniéndote…" : ctaLabel}
+        {isPending
+          ? 'uniéndote…'
+          : state.status === 'success'
+            ? 'listo ✓'
+            : ctaLabel}
       </button>
 
-      {state.status === "error" && (
+      {state.status === 'error' && (
         <p className="w-full text-center text-[13px] text-red-800 md:text-left">
           {state.message}
         </p>
