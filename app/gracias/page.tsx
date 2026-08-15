@@ -27,14 +27,6 @@ export default function GraciasPage() {
       />
 
       <div className="relative z-10 mx-auto w-full max-w-[720px] text-center">
-        {/* Vela pequeña como símbolo */}
-        <div
-          className="mb-8 text-[48px] leading-none md:text-[64px]"
-          aria-hidden="true"
-        >
-          🕯️
-        </div>
-
         {/* καιρός chico */}
         <div
           className="mb-4 text-[20px] italic text-[var(--amber)] md:text-[24px]"
@@ -87,11 +79,10 @@ export default function GraciasPage() {
           className="mx-auto mt-16 max-w-[420px] text-[14px] italic leading-relaxed text-[var(--ink-soft)]/70 md:mt-20 md:text-[15px]"
           style={{ fontFamily: 'var(--font-fraunces)' }}
         >
-          «Todo tiene su tiempo, y todo lo que se quiere debajo del cielo tiene su
-          hora.»
+          «Y les dijo: Id por todo el mundo y predicad el evangelio a toda criatura.»
           <br />
           <span className="mt-2 block not-italic text-[12px] text-[var(--ink-soft)]/60 md:text-[13px]">
-            — Eclesiastés 3:1
+            — Marcos 16: 15
           </span>
         </p>
       </div>

@@ -28,27 +28,33 @@ export function LaLlama() {
               </em>
               .
             </h2>
-            <p className="mb-6 text-[17px] leading-relaxed text-[var(--ink-soft)] md:text-[18px]">
-              Tu Llama crece con cada día que pasas con Dios. Pero la vida pasa: tienes{' '}
+            <p className="mb-5 text-[17px] leading-relaxed text-[var(--ink-soft)] md:text-[18px]">
+              Tu Llama crece cada día que pasas con Dios. Él busca un{' '}
+              <strong className="font-medium text-[var(--ink)]">corazón dispuesto</strong>, no
+              un corazón perfecto.
+            </p>
+            <p className="mb-5 text-[17px] leading-relaxed text-[var(--ink-soft)] md:text-[18px]">
+              Él conoce el afán de cada día, y te acompaña. Ánimo! — caminemos juntos en el
+              Señor, con{' '}
               <strong className="font-medium text-[var(--ink)]">
                 dos días de gracia al mes
-              </strong>{' '}
-              sin que se rompa.
+              </strong>
+              sigue avivando tu llama de Su mano.
             </p>
             <p className="text-[17px] leading-relaxed text-[var(--ink-soft)] md:text-[18px]">
-              Y si la rompes, no pasa nada. Empezamos de nuevo. Punto.
+              Y si rompes tu racha, no pasa nada. Empezamos de nuevo!
             </p>
 
             <blockquote
               className="mt-8 border-l-2 border-[var(--amber)] pl-6 text-[20px] font-light italic leading-tight text-[var(--ink)] md:mt-10 md:pl-7 md:text-[24px]"
               style={{ fontFamily: 'var(--font-fraunces)' }}
             >
-              &ldquo;Me levantaré e iré a mi padre.&rdquo;
+              &ldquo;Jamás me olvidaré de tus preceptos, pues con ellos me has dado vida.&rdquo;
               <span
                 className="mt-3 block text-[14px] italic text-[var(--amber)]"
                 style={{ fontFamily: 'var(--font-fraunces)' }}
               >
-                Lucas 15 · 18
+                Salmo 119 : 93
               </span>
             </blockquote>
           </div>

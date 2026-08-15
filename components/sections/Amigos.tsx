@@ -46,6 +46,19 @@ export function Amigos() {
                 acompañarse en el camino.
               </strong>
             </p>
+
+            <blockquote
+              className="mt-8 border-l-2 border-[var(--amber)] pl-6 text-[20px] font-light italic leading-tight text-[var(--ink)] md:mt-10 md:pl-7 md:text-[24px]"
+              style={{ fontFamily: 'var(--font-fraunces)' }}
+            >
+              &ldquo;No hay un amor más grande que el dar la vida por los amigos.&rdquo;
+              <span
+                className="mt-3 block text-[14px] italic text-[var(--amber)]"
+                style={{ fontFamily: 'var(--font-fraunces)' }}
+              >
+                Juan 15 : 13
+              </span>
+            </blockquote>
           </div>
         </div>
       </div>
