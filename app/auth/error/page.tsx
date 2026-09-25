@@ -52,7 +52,7 @@ export default function AuthErrorPage() {
             Volver al inicio
           </Link>
           <a
-            href="mailto:fernandomgarcia373@gmail.com"
+            href="mailto:hola@kairoslat.com"
             className="text-[14px] text-[var(--ink-soft)] underline decoration-[var(--ink-line)] underline-offset-4 transition hover:text-[var(--ink)] hover:decoration-[var(--amber)]"
           >
             Escríbenos si persiste

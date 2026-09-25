@@ -36,8 +36,8 @@ export default function PrivacidadPage() {
         <h3>1.3 Contacto</h3>
         <p>
           Para cualquier tema relacionado con tus datos, escríbenos a{' '}
-          <a href="mailto:fernandomgarcia373@gmail.com">
-            fernandomgarcia373@gmail.com
+          <a href="mailto:hola@kairoslat.com">
+            hola@kairoslat.com
           </a>
           . Respondemos personalmente en máximo 20 días hábiles, como marca la
           ley.
@@ -172,8 +172,8 @@ export default function PrivacidadPage() {
         <h3>6.2 Cómo ejercerlos</h3>
         <p>
           Escríbenos a{' '}
-          <a href="mailto:fernandomgarcia373@gmail.com">
-            fernandomgarcia373@gmail.com
+          <a href="mailto:hola@kairoslat.com">
+            hola@kairoslat.com
           </a>{' '}
           con el asunto <em>&ldquo;Derechos ARCO&rdquo;</em>. Respondemos en
           máximo 20 días hábiles, sin costo alguno.

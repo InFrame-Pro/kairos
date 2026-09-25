@@ -57,7 +57,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:fernandomgarcia373@gmail.com"
+                  href="mailto:hola@kairoslat.com"
                   className="hover:text-[var(--ink)]"
                 >
                   Contacto

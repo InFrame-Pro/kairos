@@ -80,10 +80,10 @@ export function LegalLayout({ title, intro, lastUpdated, children }: Props) {
           <p className="text-[14px] text-[var(--ink-soft)] md:text-[15px]">
             ¿Dudas? Escríbenos a{' '}
             <a
-              href="mailto:fernandomgarcia373@gmail.com"
+              href="mailto:hola@kairoslat.com"
               className="text-[var(--amber)] underline decoration-[var(--amber)]/40 underline-offset-4 transition hover:decoration-[var(--amber)]"
             >
-              fernandomgarcia373@gmail.com
+              hola@kairoslat.com
             </a>
             . Respondemos personalmente.
           </p>

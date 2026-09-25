@@ -204,8 +204,8 @@ export default function TerminosPage() {
         <p>
           Para cualquier pregunta, comentario o queja sobre estos términos,
           escríbenos a{' '}
-          <a href="mailto:fernandomgarcia373@gmail.com">
-            fernandomgarcia373@gmail.com
+          <a href="mailto:hola@kairoslat.com">
+            hola@kairoslat.com
           </a>
           . Respondemos personalmente.
         </p>
