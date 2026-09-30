@@ -47,7 +47,11 @@ export const metadata: Metadata = {
     description: 'Una app bíblica hecha con cariño, gratis para siempre.',
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-icon.png',
   },
   robots: {
     index: true,
