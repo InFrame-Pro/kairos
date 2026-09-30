@@ -408,14 +408,14 @@ export const MARKUP = `
       <blockquote class="dn-verse rv" style="--d:.4s">“Cada uno dé como propuso en su corazón: no con tristeza, ó por necesidad; porque Dios ama el dador alegre.”<cite>2 Corintios 9:7</cite></blockquote>
     </div>
     <div class="dn-card rv" style="--d:.2s">
-      <div class="dn-seg" id="dnFreq" role="tablist" aria-label="Frecuencia"><i class="knob"></i><button type="button" class="on" data-f="mes">Cada mes</button><button type="button" data-f="una">Una vez</button></div>
-      <div class="dn-amts" id="dnAmts">
+      <p class="dn-q">¿Con cuánto quieres sembrar?</p>
+      <div class="dn-amts" id="dnAmts" data-f="una">
         <button type="button" data-a="100">$100</button><button type="button" data-a="250" class="on">$250</button><button type="button" data-a="500">$500</button><button type="button" data-a="otra">Otra</button>
       </div>
       <label class="dn-other" id="dnOther"><span>$</span><input type="number" min="20" step="10" inputmode="numeric" placeholder="Monto en pesos" aria-label="Otro monto en pesos" /></label>
-      <p class="dn-sum" id="dnSum"><b>$250 MXN</b> cada mes</p>
+      <p class="dn-sum" id="dnSum"><b>$250 MXN</b> lo escribes en Mercado Pago</p>
       <a class="dn-go" id="dnGo" href="#" target="_blank" rel="noopener">Donar</a>
-      <p class="dn-fine">Por ahora los donativos no son deducibles de impuestos: Kairós está en proceso de constituirse como asociación civil.</p>
+      <p class="dn-fine">Pago seguro con Mercado Pago. Mientras Kairós se constituye como asociación civil, los donativos los recibe su fundador, Matías García, y todavía no son deducibles de impuestos.</p>
     </div>
   </div>
 </section>

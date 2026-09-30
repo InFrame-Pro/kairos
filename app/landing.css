@@ -652,6 +652,7 @@ footer .fine{margin-top:40px;font-size:12.5px;opacity:.7;display:flex;justify-co
 .dn-seg button.on{color:var(--tinta)}
 .dn-seg .knob{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:99px;background:var(--oro);transition:transform .5s var(--ease-out)}
 .dn-seg.una .knob{transform:translateX(100%)}
+.dn-q{font-family:var(--f-display);font-size:22px;color:#F0E6CC;text-align:center}
 .dn-amts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
 .dn-amts button{height:64px;border-radius:18px;border:1px solid var(--tinta-line);background:transparent;color:#F0E6CC;font-family:var(--f-display);font-size:22px;cursor:pointer;transition:border-color .3s,background .3s,transform .3s var(--ease)}
 .dn-amts button:hover{transform:translateY(-2px)}

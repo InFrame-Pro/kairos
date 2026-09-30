@@ -21,11 +21,8 @@ export function Landing() {
     return initLanding(root, {
       waitlist: joinWaitlist,
       church: requestChurchChannel,
-      // Enlaces de pago (Stripe, Mercado Pago…). {amount} se reemplaza por el monto.
-      donate: {
-        monthly: process.env.NEXT_PUBLIC_DONATE_MONTHLY_URL,
-        once: process.env.NEXT_PUBLIC_DONATE_ONCE_URL,
-      },
+      // Enlace de pago para donativos (Mercado Pago). Se puede cambiar en Vercel.
+      donate: { url: process.env.NEXT_PUBLIC_DONATE_URL || 'https://link.mercadopago.com.mx/matiasgarcia' },
     });
   }, []);
 
