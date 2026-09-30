@@ -154,7 +154,7 @@ export function initLanding(root, actions) {
   $$('#papers button').forEach(b => b.onclick = () => { $$('#papers button').forEach(x => x.classList.remove('on')); b.classList.add('on'); st.p = b.dataset.p; paint(); });
   const seg = $('#fonts'), knob = $('.knob', seg);
   const moveKnob = b => { knob.style.left = b.offsetLeft + 'px'; knob.style.width = b.offsetWidth + 'px'; };
-  $$('button', seg).forEach(b => b.onclick = () => { $$('button', seg).forEach(x => x.classList.remove('on')); b.classList.add('on'); st.f = b.dataset.f; st.fn = b.textContent; moveKnob(b); paint(); });
+  $$('button', seg).forEach(b => b.onclick = () => { $$('button', seg).forEach(x => x.classList.remove('on')); b.classList.add('on'); st.f = b.dataset.f; st.fn = b.textContent; moveKnob(b); paint(); const bd = $('.body', page); bd && bd.animate && bd.animate([{ opacity: .15, filter: 'blur(4px)', transform: 'translateY(6px)' }, { opacity: 1, filter: 'blur(0)', transform: 'none' }], { duration: 520, easing: 'cubic-bezier(.2,.8,.2,1)' }); });
   size.oninput = () => { st.s = +size.value; paint(); };
   const placeKnob = () => moveKnob($('button.on', seg));
   document.fonts ? document.fonts.ready.then(placeKnob) : placeKnob();

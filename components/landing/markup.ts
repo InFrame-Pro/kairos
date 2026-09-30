@@ -189,7 +189,7 @@ export const MARKUP = `
             <i class="knob"></i>
             <button data-f="'EB Garamond',serif" class="on" style="font-family:'EB Garamond',serif">Garamond</button>
             <button data-f="'Fraunces',serif" style="font-family:'Fraunces',serif">Fraunces</button>
-            <button data-f="'Literata',serif" style="font-family:'Literata',serif">Literata</button>
+            <button data-f="'Courier Prime',monospace" style="font-family:'Courier Prime',monospace">Máquina</button>
             <button data-f="'Inter Tight',sans-serif" style="font-family:'Inter Tight',sans-serif">Inter</button>
           </div>
         </div>
@@ -363,7 +363,7 @@ export const MARKUP = `
         <span class="kicker">Para pastores y líderes</span>
         <h2 class="h-m">¿Tu iglesia quiere su <em class="a">canal</em> en Kairós?</h2>
         <p class="cc-lead">Comparte tus prédicas en audio, bosquejos y avisos con tus jóvenes, en el mismo lugar donde leen la Biblia. Estamos buscando iglesias piloto en Latinoamérica.</p>
-        <ul class="cc-list"><li>Gratis para iglesias</li><li>Tú decides qué se publica</li><li>Te ayudamos a empezar</li></ul>
+        <ul class="cc-list"><li>Canal verificado con el nombre de tu iglesia</li><li>Tú decides qué se publica</li><li>Te ayudamos a empezar</li></ul>
         <form class="cform" data-form="iglesia"><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <input name="church" required placeholder="Nombre de la iglesia" aria-label="Nombre de la iglesia" />
           <input name="city" required placeholder="Ciudad y país" aria-label="Ciudad y país" />
@@ -385,7 +385,7 @@ export const MARKUP = `
       <h2 class="h-l rv" style="--d:.1s">Hecha en <em class="a">comunidad</em>.</h2>
     </div>
     <div class="bento2">
-      <div class="tile stat rv" style="--d:.05s"><span class="big"><em>$0</em></span><small>Gratis para siempre.</small></div>
+      <div class="tile stat rv" style="--d:.05s"><span class="big"><em>100%</em></span><small>En español, pensada para Latinoamérica.</small></div>
       <div class="tile dark stat rv" style="--d:.1s"><span class="big">0</span><small>Anuncios. Nunca.</small></div>
       <div class="tile stat rv" style="--d:.15s"><span class="big"><em>31k</em></span><small>Versículos en tu mano.</small></div>
       <div class="tile b-f rv" style="--d:.2s"><div class="ph"></div><div><span class="kicker">Sin fines de lucro</span><h3 style="font-size:26px">Lo construimos contigo.</h3><p>Kairós nace como asociación civil. No hay nada que venderte: solo queremos que abras la Palabra.</p></div></div>
@@ -436,7 +436,7 @@ export const MARKUP = `
         <div class="ok">✦ Estás dentro. Revisa tu correo.</div>
       </form>
     </div>
-    <div class="perks rv" style="--d:.4s"><span>Gratis para siempre</span><span>Sin anuncios</span><span>Hecha en Latinoamérica, en comunidad</span></div>
+    <div class="perks rv" style="--d:.4s"><span>Sin anuncios</span><span>Hecha en Latinoamérica, en comunidad</span></div>
     <div class="rv" style="--d:.5s"><div class="stores"><span class="st-l">Próximamente en</span><span class="store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.8c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.32-3.52zM14.2 6.33c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>App Store</span><span class="store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5v17l14-8.5z"/><path d="M5 3.5l9.5 9.5M5 20.5l9.5-8.5" opacity=".55"/></svg>Google Play</span></div></div>
   </div>
 </section>
