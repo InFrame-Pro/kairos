@@ -12,6 +12,10 @@
    ============================================ */
 
 :root {
+  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-cardo: 'Cardo', serif;
+  --font-inter-tight: 'Inter Tight', system-ui, sans-serif;
   --cream: #F0E6CC;
   --cream-soft: #F7EFDB;
   --cream-deep: #E5D3A6;

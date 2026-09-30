@@ -1,34 +1,13 @@
 import type { Metadata, Viewport } from 'next';
-import { Fraunces, Cinzel, Cardo, Inter_Tight } from 'next/font/google';
 import { Suspense } from 'react';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 import { PostHogProvider } from '@/components/ui/PostHogProvider';
 import './globals.css';
 
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-fraunces',
-  display: 'swap',
-  axes: ['opsz'],
-});
-const cinzel = Cinzel({
-  subsets: ['latin'],
-  variable: '--font-cinzel',
-  weight: ['400', '500', '600'],
-  display: 'swap',
-});
-const cardo = Cardo({
-  subsets: ['latin'],
-  variable: '--font-cardo',
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  display: 'swap',
-});
-const interTight = Inter_Tight({
-  subsets: ['latin'],
-  variable: '--font-inter-tight',
-  display: 'swap',
-});
+// Las fuentes se cargan desde Google Fonts en el navegador (no al compilar),
+// para que un corte de red en Vercel no vuelva a tumbar el deploy.
+const FONTS_URL =
+  'https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter+Tight:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&display=swap';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -97,8 +76,12 @@ export default function RootLayout({
     <html
       lang="es"
       suppressHydrationWarning
-      className={`${fraunces.variable} ${cinzel.variable} ${cardo.variable} ${interTight.variable}`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="stylesheet" href={FONTS_URL} />
+      </head>
       <body>
         <ThemeProvider>
           <Suspense fallback={null}>
