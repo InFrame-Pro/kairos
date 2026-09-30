@@ -18,7 +18,15 @@ export function Landing() {
     if (!root) return;
     // Marcado limpio en cada montaje: así los listeners nunca se duplican.
     root.innerHTML = MARKUP;
-    return initLanding(root, { waitlist: joinWaitlist, church: requestChurchChannel });
+    return initLanding(root, {
+      waitlist: joinWaitlist,
+      church: requestChurchChannel,
+      // Enlaces de pago (Stripe, Mercado Pago…). {amount} se reemplaza por el monto.
+      donate: {
+        monthly: process.env.NEXT_PUBLIC_DONATE_MONTHLY_URL,
+        once: process.env.NEXT_PUBLIC_DONATE_ONCE_URL,
+      },
+    });
   }, []);
 
   return (

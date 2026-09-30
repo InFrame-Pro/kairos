@@ -393,6 +393,33 @@ export const MARKUP = `
   </div>
 </section>
 
+<!-- ============ DONAR ============ -->
+<section class="sec donar" id="donar" data-theme="dark">
+  <div class="wrap dn">
+    <div class="dn-copy">
+      <span class="kicker rv">Donar</span>
+      <h2 class="h-l rv" style="--d:.1s">Siembra en <em class="a">esta generación</em>.</h2>
+      <p class="lead rv" style="--d:.2s">Kairós no tiene anuncios ni cobra suscripciones. Lo sostienen personas e iglesias que creen que un joven con la Palabra en la mano puede cambiar su historia.</p>
+      <ul class="dn-uses rv" style="--d:.3s">
+        <li><b>Servidores</b><span>Para que la app, tus datos y las prédicas estén siempre disponibles.</span></li>
+        <li><b>Versiones de la Biblia</b><span>Licencias para sumar NVI, RVR1960, NTV y más.</span></li>
+        <li><b>Nuevas funciones</b><span>Planes, canales de iglesias y todo lo que viene.</span></li>
+      </ul>
+      <blockquote class="dn-verse rv" style="--d:.4s">“Cada uno dé como propuso en su corazón: no con tristeza, ó por necesidad; porque Dios ama el dador alegre.”<cite>2 Corintios 9:7</cite></blockquote>
+    </div>
+    <div class="dn-card rv" style="--d:.2s">
+      <div class="dn-seg" id="dnFreq" role="tablist" aria-label="Frecuencia"><i class="knob"></i><button type="button" class="on" data-f="mes">Cada mes</button><button type="button" data-f="una">Una vez</button></div>
+      <div class="dn-amts" id="dnAmts">
+        <button type="button" data-a="100">$100</button><button type="button" data-a="250" class="on">$250</button><button type="button" data-a="500">$500</button><button type="button" data-a="otra">Otra</button>
+      </div>
+      <label class="dn-other" id="dnOther"><span>$</span><input type="number" min="20" step="10" inputmode="numeric" placeholder="Monto en pesos" aria-label="Otro monto en pesos" /></label>
+      <p class="dn-sum" id="dnSum"><b>$250 MXN</b> cada mes</p>
+      <a class="dn-go" id="dnGo" href="#" target="_blank" rel="noopener">Donar</a>
+      <p class="dn-fine">Por ahora los donativos no son deducibles de impuestos: Kairós está en proceso de constituirse como asociación civil.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PREGUNTAS ============ -->
 <section class="sec" id="faq" data-theme="dark" style="background:var(--tinta)">
   <div class="wrap faq">
@@ -402,7 +429,7 @@ export const MARKUP = `
       <p class="lead rv" style="--d:.2s;margin-top:20px">¿Te quedó otra duda? Escríbenos a <a href="mailto:hola@kairoslat.com" class="ln-a">hola@kairoslat.com</a>.</p>
     </div>
     <div class="qa" id="qa">
-      <div class="q rv"><button>¿De verdad es gratis?<i></i></button><div class="a"><div><p>Sí. Kairós es gratis para siempre y sin anuncios. No hay suscripciones ni versión premium: nace como un proyecto sin fines de lucro.</p></div></div></div>
+      <div class="q rv"><button>¿De verdad es gratis?<i></i></button><div class="a"><div><p>Sí. Kairós es gratis para siempre y sin anuncios. No hay suscripciones ni versión premium: nace como un proyecto sin fines de lucro y se sostiene con <a href="#donar" class="ln-a">donativos</a>.</p></div></div></div>
       <div class="q rv" style="--d:.05s"><button>¿Quién está detrás?<i></i></button><div class="a"><div><p>Lo empezamos en Cancún, México, jóvenes que amamos la Palabra y la tecnología. Lo construimos junto con iglesias y con quienes se suman a la beta.</p></div></div></div>
       <div class="q rv" style="--d:.1s"><button>¿Qué versiones de la Biblia tiene?<i></i></button><div class="a"><div><p>Hoy puedes leer la Reina-Valera 1909 y la Palabra de Dios para Todos. Estamos gestionando las licencias de más versiones, como NVI, RVR1960, NTV, DHH y TLA.</p></div></div></div>
       <div class="q rv" style="--d:.15s"><button>¿Qué pasa con mis datos?<i></i></button><div class="a"><div><p>Puedes usar Kairós sin cuenta. Si creas una, solo guardamos lo necesario para respaldar tu racha, subrayados y planes. Nadie más ve lo que subrayas, y puedes borrar tu cuenta desde la app cuando quieras.</p></div></div></div>
@@ -446,9 +473,9 @@ export const MARKUP = `
   <div class="wrap">
     <div class="row">
       <div><img src="/landing/logo-crema.svg" alt="Kairós" /><div>Una app bíblica para tu generación.</div></div>
-      <nav><a href="/nosotros">Nosotros</a><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a><a href="mailto:hola@kairoslat.com">Contacto</a></nav>
+      <nav><a href="/nosotros">Nosotros</a><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a><a href="#donar">Donar</a><a href="mailto:hola@kairoslat.com">Contacto</a></nav>
     </div>
-    <div class="fine"><span>© 2026 Kairós A.C.</span><span>Textos bíblicos: Reina-Valera 1909 (dominio público).</span></div>
+    <div class="fine"><span>© 2026 Kairós</span><span>Textos bíblicos: Reina-Valera 1909 (dominio público).</span></div>
   </div>
 </footer>
 `;

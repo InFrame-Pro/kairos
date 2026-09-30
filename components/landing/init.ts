@@ -285,6 +285,33 @@ export function initLanding(root, actions) {
     } finally { btn.disabled = false; btn.textContent = label; }
   }, sig));
 
+  // donar: frecuencia + monto → enlace de pago
+  const dn = $('#dnFreq');
+  if (dn) {
+    const links = actions.donate || {};
+    const st = { f: 'mes', a: 250 };
+    const other = $('#dnOther'), oin = $('input', other), sum = $('#dnSum'), go = $('#dnGo');
+    const fmt = n => '$' + Number(n).toLocaleString('es-MX') + ' MXN';
+    const paintDn = () => {
+      const amt = st.a === 'otra' ? Math.round(+oin.value || 0) : st.a;
+      const ok = amt >= 20;
+      sum.innerHTML = ok ? `<b>${fmt(amt)}</b> ${st.f === 'mes' ? 'cada mes' : 'una sola vez'}` : '<b>—</b> escribe un monto desde $20';
+      go.textContent = ok ? (st.f === 'mes' ? `Donar ${fmt(amt)} al mes` : `Donar ${fmt(amt)}`) : 'Donar';
+      go.classList.toggle('off', !ok);
+      const url = st.f === 'mes' ? links.monthly : links.once;
+      go.href = url ? url.replace('{amount}', amt) : `mailto:hola@kairoslat.com?subject=${encodeURIComponent('Quiero donar a Kairós')}&body=${encodeURIComponent(`Hola, me gustaría donar ${fmt(amt)} ${st.f === 'mes' ? 'cada mes' : 'una vez'}.`)}`;
+    };
+    $$('button', dn).forEach(b => b.addEventListener('click', () => { $$('button', dn).forEach(x => x.classList.toggle('on', x === b)); st.f = b.dataset.f; dn.classList.toggle('una', st.f === 'una'); paintDn(); }, sig));
+    $$('#dnAmts button').forEach(b => b.addEventListener('click', () => {
+      $$('#dnAmts button').forEach(x => x.classList.toggle('on', x === b));
+      st.a = b.dataset.a === 'otra' ? 'otra' : +b.dataset.a;
+      other.classList.toggle('on', st.a === 'otra'); if (st.a === 'otra') oin.focus();
+      paintDn();
+    }, sig));
+    oin.addEventListener('input', paintDn, sig);
+    paintDn();
+  }
+
   return () => {
     ac.abort();
     observers.forEach(o => o.disconnect());
