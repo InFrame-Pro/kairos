@@ -6,8 +6,8 @@ export const MARKUP = `
 <header class="nav" id="nav">
   <div class="nav-in">
     <a href="#top" class="brand" aria-label="Kairós">
-      <img class="logo cream" src="/landing/logo-crema.png" alt="Kairós" />
-      <img class="logo dark" src="/landing/logo-negro.png" alt="" aria-hidden="true" />
+      <img class="logo cream" src="/landing/logo-crema.svg" alt="Kairós" />
+      <img class="logo dark" src="/landing/logo-negro.svg" alt="" aria-hidden="true" />
     </a>
     <ul>
       <li><a href="#app">La app</a></li>
@@ -154,7 +154,7 @@ export const MARKUP = `
 
             <!-- 4 · compartir -->
             <div class="scr share-scr" data-scr="4">
-              <div class="share"><img class="wm" src="/landing/logo-crema.png" alt="" /><p>Nuevas son cada mañana; grande es tu fidelidad.</p><small>LAMENTACIONES 3:23</small></div>
+              <div class="share"><img class="wm" src="/landing/logo-crema.svg" alt="" /><p>Nuevas son cada mañana; grande es tu fidelidad.</p><small>LAMENTACIONES 3:23</small></div>
               <div class="share-btns"><span>Compartir</span><span>Cambiar foto</span></div>
             </div>
           </div>
@@ -445,7 +445,7 @@ export const MARKUP = `
 <footer>
   <div class="wrap">
     <div class="row">
-      <div><img src="/landing/logo-crema.png" alt="Kairós" /><div>Una app bíblica para tu generación.</div></div>
+      <div><img src="/landing/logo-crema.svg" alt="Kairós" /><div>Una app bíblica para tu generación.</div></div>
       <nav><a href="/nosotros">Nosotros</a><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a><a href="mailto:hola@kairoslat.com">Contacto</a></nav>
     </div>
     <div class="fine"><span>© 2026 Kairós A.C.</span><span>Textos bíblicos: Reina-Valera 1909 (dominio público).</span></div>
