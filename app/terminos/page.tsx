@@ -12,7 +12,7 @@ export default function TerminosPage() {
   return (
     <LegalLayout
       title="Términos y condiciones."
-      lastUpdated="30 de septiembre de 2026"
+      lastUpdated="6 de octubre de 2026"
     >
       <section>
         <h2>1. Aceptación de los términos</h2>
@@ -186,7 +186,9 @@ export default function TerminosPage() {
 
         <h3>8.2 Textos bíblicos</h3>
         <p>
-          La Reina-Valera 1909 es de dominio público. Otras versiones se
+          La Reina-Valera 1909 es de dominio público; por eso las imágenes
+          de versículos que creas con ella en Kairós no llevan aviso de
+          derechos. Otras versiones se
           muestran con autorización de sus titulares o a través de servicios
           como YouVersion, y conservan sus derechos y avisos de copyright.
           No puedes copiarlas masivamente ni redistribuirlas fuera de lo que
