@@ -31,10 +31,7 @@ const css = `
   animation:nf-up .8s .25s cubic-bezier(.2,.8,.2,1) both}
 .nf-h em{color:#E8B45A;font-style:italic;font-weight:300}
 .nf-p{color:#A89876;font-size:17px;line-height:1.55;margin:0 auto;max-width:440px;animation:nf-up .8s .35s cubic-bezier(.2,.8,.2,1) both}
-.nf-v{margin:28px auto 0;max-width:440px;font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:17px;
-  line-height:1.5;color:#D9CBA8;animation:nf-up .8s .45s cubic-bezier(.2,.8,.2,1) both}
-.nf-v cite{display:block;margin-top:8px;font-style:normal;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.28em;color:#E8B45A}
-.nf-a{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px;animation:nf-up .8s .55s cubic-bezier(.2,.8,.2,1) both}
+.nf-a{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px;animation:nf-up .8s .55s cubic-bezier(.2,.8,.2,1) both}
 .nf-btn{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 26px;border-radius:99px;font-size:16px;text-decoration:none;
   transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s}
 .nf-btn:hover{transform:translateY(-2px)}
@@ -128,16 +125,12 @@ export default function NotFound() {
         <p className="nf-p">
           La buscamos entre las noventa y nueve y no aparece. Tal vez el enlace cambió o se escribió mal.
         </p>
-        <blockquote className="nf-v">
-          “Dadme el parabién, porque he hallado mi oveja que se había perdido.”
-          <cite>Lucas 15:6</cite>
-        </blockquote>
         <div className="nf-a">
           <Link href="/" className="nf-btn main">
-            Volver al redil
+            Volver al inicio
           </Link>
-          <a href="mailto:hola@kairoslat.com" className="nf-btn ghost">
-            Avisarnos
+          <a href="mailto:hola@kairoslat.com?subject=Enlace%20roto%20en%20Kair%C3%B3s" className="nf-btn ghost">
+            Reportar
           </a>
         </div>
       </div>
